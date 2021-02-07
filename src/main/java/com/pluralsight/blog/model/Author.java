@@ -28,12 +28,13 @@ public class Author {
 	
 	
 	public Author ( ) {
+		
 		super ( );
+		this.posts = new ArrayList <> ( );
 	}
 	
 	public Author ( String username, String firstname, String lastname, String password ) {
 		this ( );
-		this.posts = new ArrayList <> ( );
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.username = username;
@@ -95,10 +96,10 @@ public class Author {
 	}
 	
 	public List < Post > getPosts ( ) {
-		return this.posts;
+		return posts;
 	}
 	
 	public void addPost ( Post post ) {
-		this.posts.add ( post );
+		posts.add ( post );
 	}
 }
